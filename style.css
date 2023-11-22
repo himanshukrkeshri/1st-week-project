@@ -1,0 +1,525 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 33%;
+    border-color: aliceblue;
+    border-radius: 40%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+.nav-list{
+  width: 50%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  }
+
+.nav-list li{
+ list-style: none;
+ padding: 26px 30px;
+}
+
+.nav-list li a{
+ text-decoration: none;
+ color:gray;
+}
+.nav-list li a:hover{
+    color: black;
+   }
+.rightNav{
+    background-color: blue;
+    width: 50%;
+    text-align: right;
+    padding: 26px 50px;
+    cursor: pointer;
+}
+.rate {
+    float: left;
+    /* height: 46px; */
+    padding: 0 600px;
+    /* text-align: center;
+    justify-content: center;
+    /* align-items: center;  */
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.tracking{
+    text-align: center;
+    font-size: 30px;
+    padding: 35px 10px;
+}
+.size{
+    color:gray;
+}
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: sticky; */
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.navmiddle{
+  width: 50%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  }
+
+.navmiddle li{
+ list-style: none;
+ padding: 20px 25px;
+ font-style:inherit;
+ 
+}
+
+.navmiddle li a{
+ text-decoration: none;
+ color:blue;
+}
+.navmiddle li a:hover{
+    color: black;
+   }
+.tryfree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+.tracking2{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 10px;
+}   
+.uselogo{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 240px;
+}
+.navbar22{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    /* position: sticky; */
+    top: 0;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.nav-list22{
+  width: 30%;
+  justify-content: center;
+  background-color: yellow;
+  /* display: flex; */
+  align-items: center;
+  text-align: center;
+  padding: 0 100px ;
+  }
+
+.nav-list22 li{
+ list-style: none;
+ padding: 26px 30px;
+}
+
+.nav-list22 li a{
+ text-decoration: none;
+ color:black;
+}
+.nav-list22 li a:hover{
+    color:gray;
+   }
+.rightNavbar{
+    background-color: blue;
+    width: 70%;
+    text-align: right;
+    padding: 26px 10px;
+    padding-left: 20px;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.frontend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: sticky; */
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.navmiddle22{
+  width: 50%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  }
+
+.navmiddle22 li{
+ list-style: none;
+ /* padding: 20px 25px; */
+ font-style:inherit;
+ 
+}
+
+.navmiddle22 li a{
+ text-decoration: none;
+ color:blue;
+}
+.navmiddle22 li a:hover{
+    color: black;
+   }
+   #frame { 
+	margin: 0 auto; 
+	width: 800px; 
+	max-width: 100%; 
+	text-align: center; 
+} 
+
+#frame input[type=radio] { 
+	display: none; 
+} 
+
+#frame label { 
+	cursor: pointer; 
+	text-decoration: none; 
+} 
+
+#slides { 
+	padding: 10px; 
+	border: 5px solid #0F0; 
+	background: #00F; 
+	position: relative; 
+	z-index: 1; 
+} 
+
+#overflow { 
+	width: 100%; 
+	overflow: hidden; 
+} 
+
+#frame1:checked~#slides .inner { 
+	margin-left: 0; 
+} 
+
+#frame2:checked~#slides .inner { 
+	margin-left: -100%; 
+} 
+
+#frame3:checked~#slides .inner { 
+	margin-left: -200%; 
+} 
+
+#frame4:checked~#slides .inner { 
+	margin-left: -300%; 
+} 
+
+#slides .inner { 
+	transition: margin-left 800ms 
+		cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+	width: 400%; 
+	line-height: 0; 
+	height: 300px; 
+} 
+
+#slides .frame { 
+	width: 25%; 
+	float: left; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 100%; 
+	color: #FFF; 
+} 
+
+#slides .frame_1 { 
+	background: #90C; 
+} 
+
+#slides .frame_2 { 
+	background: #F90; 
+} 
+
+#slides .frame_3 { 
+	background: #606; 
+} 
+
+#slides .frame_4 { 
+	background: #C00; 
+} 
+
+#controls { 
+	margin: -180px 0 0 0; 
+	width: 100%; 
+	height: 50px; 
+	z-index: 3; 
+	position: relative; 
+} 
+
+#controls label { 
+	transition: opacity 0.2s ease-out; 
+	display: none; 
+	width: 50px; 
+	height: 50px; 
+	opacity: .4; 
+} 
+
+#controls label:hover { 
+	opacity: 1; 
+} 
+
+#frame1:checked~#controls label:nth-child(2), 
+#frame2:checked~#controls label:nth-child(3), 
+#frame3:checked~#controls label:nth-child(4), 
+#frame4:checked~#controls label:nth-child(1) { 
+	background: 
+url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat; 
+	float: right; 
+	margin: 0 -50px 0 0; 
+	display: block; 
+} 
+
+#frame1:checked~#controls label:nth-last-child(2), 
+#frame2:checked~#controls label:nth-last-child(3), 
+#frame3:checked~#controls label:nth-last-child(4), 
+#frame4:checked~#controls label:nth-last-child(1) { 
+	background: 
+url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat; 
+	float: left; 
+	margin: 0 0 0 -50px; 
+	display: block; 
+} 
+
+#bullets { 
+	margin: 150px 0 0; 
+	text-align: center; 
+} 
+
+#bullets label { 
+	display: inline-block; 
+	width: 10px; 
+	height: 10px; 
+	border-radius: 100%; 
+	background: #ccc; 
+	margin: 0 10px; 
+} 
+
+#frame1:checked~#bullets label:nth-child(1), 
+#frame2:checked~#bullets label:nth-child(2), 
+#frame3:checked~#bullets label:nth-child(3), 
+#frame4:checked~#bullets label:nth-child(4) { 
+	background: #444; 
+} 
+
+@media screen and (max-width: 900px) { 
+	#frame1:checked~#controls label:nth-child(2), 
+	#frame2:checked~#controls label:nth-child(3), 
+	#frame3:checked~#controls label:nth-child(4), 
+	#frame4:checked~#controls label:nth-child(1), 
+	#frame1:checked~#controls label:nth-last-child(2), 
+	#frame2:checked~#controls label:nth-last-child(3), 
+	#frame3:checked~#controls label:nth-last-child(4), 
+	#frame4:checked~#controls label:nth-last-child(1) { 
+		margin: 0; 
+	} 
+	#slides { 
+		max-width: calc(100% - 140px); 
+		margin: 0 auto; 
+	} 
+}
+.frontend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: sticky; */
+    top: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.navmiddle22{
+  width: 50%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  }
+
+.navmiddle22 li{
+ list-style: none;
+ /* padding: 20px 25px; */
+ font-style:inherit;
+ 
+}
+
+.navmiddle22 li a{
+ text-decoration: none;
+ color:blue;
+}
+.navmiddle22 li a:hover{
+    color: black;
+   }
+.fill{
+    color: #717171;
+}
+.navbar{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+.nav-list{
+  width: 50%;
+  background-color: yellow;
+  /* display: flex; */
+  align-items: center;
+  }
+
+.nav-list li{
+ list-style: none;
+ padding: 26px 30px;
+}
+
+.nav-list li a{
+ text-decoration: none;
+ color:gray;
+}
+.nav-list li a:hover{
+    color: black;
+   }
+.rightNav{
+    background-color: blue;
+    width: 50%;
+    /* text-align: right; */
+    padding: 26px 50px;
+    cursor: pointer;
+}
